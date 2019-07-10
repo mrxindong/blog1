@@ -1,0 +1,36 @@
+[2018-08-28T18:39:58.781] [ERROR] basicDao - { Error: connect ETIMEDOUT
+    at PoolConnection.Connection._handleConnectTimeout (d:\H5\Myblog\nodejs\myblog\node_modules\mysql\lib\Connection.js:419:13)
+    at Object.onceWrapper (events.js:313:30)
+    at emitNone (events.js:106:13)
+    at Socket.emit (events.js:208:7)
+    at Socket._onTimeout (net.js:420:8)
+    at ontimeout (timers.js:482:11)
+    at tryOnTimeout (timers.js:317:5)
+    at Timer.listOnTimeout (timers.js:277:5)
+    --------------------
+    at Protocol._enqueue (d:\H5\Myblog\nodejs\myblog\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Protocol.handshake (d:\H5\Myblog\nodejs\myblog\node_modules\mysql\lib\protocol\Protocol.js:52:23)
+    at PoolConnection.connect (d:\H5\Myblog\nodejs\myblog\node_modules\mysql\lib\Connection.js:130:18)
+    at Pool.getConnection (d:\H5\Myblog\nodejs\myblog\node_modules\mysql\lib\Pool.js:48:16)
+    at d:\H5\Myblog\nodejs\myblog\node_modules\promise-mysql\lib\helper.js:16:24
+    at Promise._execute (d:\H5\Myblog\nodejs\myblog\node_modules\promise-mysql\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (d:\H5\Myblog\nodejs\myblog\node_modules\promise-mysql\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (d:\H5\Myblog\nodejs\myblog\node_modules\promise-mysql\node_modules\bluebird\js\release\promise.js:79:10)
+    at Pool.promiseCallback (d:\H5\Myblog\nodejs\myblog\node_modules\promise-mysql\lib\helper.js:6:10)
+    at pool.getConnection (d:\H5\Myblog\nodejs\myblog\node_modules\promise-mysql\lib\pool.js:10:28)
+    at Object.aQuery (d:\H5\Myblog\nodejs\myblog\service\mysqlHelper.js:27:31)
+    at Object.findbydomain (d:\H5\Myblog\nodejs\myblog\service\basicDao.js:25:38)
+    at Article.getlastblog (d:\H5\Myblog\nodejs\myblog\controller\articleContro.js:377:43)
+    at Layer.handle [as handle_request] (d:\H5\Myblog\nodejs\myblog\node_modules\express\lib\router\layer.js:95:5)
+    at next (d:\H5\Myblog\nodejs\myblog\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (d:\H5\Myblog\nodejs\myblog\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (d:\H5\Myblog\nodejs\myblog\node_modules\express\lib\router\layer.js:95:5)
+    at d:\H5\Myblog\nodejs\myblog\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (d:\H5\Myblog\nodejs\myblog\node_modules\express\lib\router\index.js:335:12)
+    at next (d:\H5\Myblog\nodejs\myblog\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (d:\H5\Myblog\nodejs\myblog\node_modules\express\lib\router\index.js:174:3)
+    at router (d:\H5\Myblog\nodejs\myblog\node_modules\express\lib\router\index.js:47:12)
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true }
